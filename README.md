@@ -1,1 +1,3 @@
-# rock-paper-scissors
+# Rock Paper Scissors
+
+Everybody's favourite game
