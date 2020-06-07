@@ -1,4 +1,144 @@
-#message {
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #76b5ca;
+}
+
+body.good {
+  background-color: seagreen;
+}
+
+body.normal {
+  background-color: #76b5ca;
+}
+
+body.bad {
+  background-color: #923131;
+}
+
+body main {
+  padding: 40px;
+  margin: 20px 80px;
+  background-color: lightblue;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[7];
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas: 'rounds-box rounds-box rounds-box' 'rock . computer' 'player paper computer' 'player . scissors' 'countdown countdown countdown' 'buttons buttons buttons' 'answer-bar answer-bar answer-bar';
+}
+
+body main h1 {
+  text-align: center;
+  font-style: italic;
+}
+
+body main section button {
+  background-color: lightgrey;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  font-size: 25px;
+}
+
+body main section button:hover {
+  background-color: #deeceb;
+}
+
+body main section.players {
+  background-color: #69a4db;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+body main section.players h4 {
+  color: purple;
+  font-size: 80px;
+  text-align: center;
+}
+
+body main#message {
   display: none;
+}
+
+body main #rock {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: rock;
+}
+
+body main #paper {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: paper;
+}
+
+body main #scissors {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: scissors;
+}
+
+body main #rounds-box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: rounds-box;
+  height: 75px;
+  text-align: center;
+}
+
+body main #player {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: player;
+}
+
+body main #computer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: computer;
+}
+
+body main #buttons {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: buttons;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main #count {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: countdown;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+body main #answer-bar {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: answer-bar;
+  text-align: center;
+  font-size: 25px;
 }
 /*# sourceMappingURL=style.css.map */

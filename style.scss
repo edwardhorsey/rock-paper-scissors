@@ -1,5 +1,128 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+body {
+  background-color: rgb(118, 181, 202);
 
+  &.good {
+    background-color: seagreen;
+  }
 
-#message {
-  display: none;
+  &.normal {
+    background-color: rgb(118, 181, 202);
+
+  }
+
+  &.bad {
+    background-color: rgb(146, 49, 49);
+
+  }
+
+  main {
+    padding: 40px;
+    margin: 20px 80px;
+    background-color: lightblue;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    'rounds-box rounds-box rounds-box'
+    'rock . computer'
+    'player paper computer'
+    'player . scissors'
+    'countdown countdown countdown'
+    'buttons buttons buttons'
+    'answer-bar answer-bar answer-bar'
+    ;
+
+    h1 {
+      text-align: center;
+      font-style: italic;
+    }
+
+    section {
+
+      button {
+        background-color: lightgrey;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        margin: 5px;
+        font-size: 25px;
+        &:hover {
+          background-color: rgb(222, 236, 235);
+        }
+      }
+
+      &.players {
+        background-color: rgb(105, 164, 219);
+        border-radius: 10px;
+        padding: 10px;
+        color: white;
+        text-align: left;
+
+        h4{
+          color: purple;
+          font-size: 80px;
+          text-align: center;
+        }
+      }
+
+    }
+
+    &#message {
+      display: none;
+    }
+
+    // grid stuff
+
+    #rock {
+      grid-area: rock;
+    }
+
+    #paper {
+      grid-area: paper;
+    }
+
+    #scissors {
+      grid-area: scissors;
+    }
+
+    #rounds-box {
+      grid-area: rounds-box;
+      height: 75px;
+      text-align: center;
+    }
+
+    #player {
+      grid-area: player;
+    }
+
+    #computer {
+      grid-area: computer;
+    }
+
+    #buttons {
+      grid-area: buttons;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #count {
+      grid-area: countdown;
+      text-align: center;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    #answer-bar {
+      grid-area: answer-bar;
+      text-align: center;
+      font-size: 25px;
+    }
+
+  }
 }
