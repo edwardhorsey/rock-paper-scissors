@@ -29,10 +29,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(7, 1fr);
     grid-template-areas:
+    'rock paper scissors'
     'rounds-box rounds-box rounds-box'
-    'rock . computer'
-    'player paper computer'
-    'player . scissors'
+    'player . computer'
+    'player . computer'
     'countdown countdown countdown'
     'buttons buttons buttons'
     'answer-bar answer-bar answer-bar'

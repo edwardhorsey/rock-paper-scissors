@@ -31,7 +31,7 @@ body main {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[7];
       grid-template-rows: repeat(7, 1fr);
-      grid-template-areas: 'rounds-box rounds-box rounds-box' 'rock . computer' 'player paper computer' 'player . scissors' 'countdown countdown countdown' 'buttons buttons buttons' 'answer-bar answer-bar answer-bar';
+      grid-template-areas: 'rock paper scissors' 'rounds-box rounds-box rounds-box' 'player . computer' 'player . computer' 'countdown countdown countdown' 'buttons buttons buttons' 'answer-bar answer-bar answer-bar';
 }
 
 body main h1 {
@@ -71,25 +71,25 @@ body main section#message {
 }
 
 body main #rock {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: rock;
 }
 
 body main #paper {
-  -ms-grid-row: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: paper;
 }
 
 body main #scissors {
-  -ms-grid-row: 4;
+  -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: scissors;
 }
 
 body main #rounds-box {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: rounds-box;
@@ -105,7 +105,7 @@ body main #player {
 }
 
 body main #computer {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: computer;
