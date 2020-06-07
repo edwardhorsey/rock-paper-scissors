@@ -29,19 +29,19 @@ const updateScore = () => {
   computerScore.innerHTML = computerS;
   if (rounds > 9) {
     messageBar.style.display = 'block';
-  }
   if (playerS > computerS*1.5) {
     messageBar.innerHTML = threeStates[0];
     // happy theme
-    body.classList += 'good'
+    body.classList = 'good';
   } else if (playerS < computerS*0.67) {
     messageBar.innerHTML = threeStates[2];
     // normal theme
-    body.classList += 'bad'
+    body.classList = 'bad';
   } else {
     messageBar.innerHTML = threeStates[1];
     // sad theme
-    body.classList += 'normal'
+    body.classList = 'normal';
+  }
   }
 };
 
